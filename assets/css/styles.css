@@ -1,0 +1,36 @@
+/* RESETS */
+.footer {
+    padding: 30px;
+}
+
+/* CUSTOM STYLES */
+div.hero-head {
+    background-color: hsl( 221 , 14% , 9% );
+}
+
+.navbar-item img {
+    max-height: 80px;
+}
+
+#about-us {
+    background-color: hsl( 221 , 14% , 9% );
+}
+
+/* #card-shadow {
+    --bulma-card-shadow: #000;
+} */
+
+.footer {
+    background-color: hsl( 221 , 14% , 9% );
+}
+
+footer p {
+    font-size: 14px;
+    padding: 0 3%;
+}
+
+.footer img {
+    max-height: 35px;
+}
+
+/* RESPONSIVE */
