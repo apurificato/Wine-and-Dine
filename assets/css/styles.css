@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-/* GLOBAL */
-
+/* RESETS */
 :root {
     --main-font: "Kanit", sans-serif;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    
+    height: 100%;
 }
 
 section {
@@ -20,6 +16,7 @@ h1 {
     font-weight: 400;
 }
 
+/* GLOBAL */
 .heading {
     font-family: var(--main-font);
     font-weight: 400;
@@ -30,10 +27,9 @@ h1 {
     font-weight: 400;
 }
 
-=======
-/* RESETS */
 .footer {
     padding: 30px;
+    background-color: hsl( 221 , 14% , 9% );
 }
 
 /* CUSTOM STYLES */
@@ -55,11 +51,8 @@ div.hero-head {
 
 /* #card-shadow {
     --bulma-card-shadow: #000;
-} */
-
-.footer {
-    background-color: hsl( 221 , 14% , 9% );
 }
+*/
 
 footer p {
     font-size: 14px;
@@ -71,4 +64,3 @@ footer p {
 }
 
 /* RESPONSIVE */
->>>>>>> 3d814dd509dca4e9d6d56896a28e9e283b39751e
