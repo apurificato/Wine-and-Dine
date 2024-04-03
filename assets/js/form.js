@@ -37,7 +37,6 @@ function getWinePair(userInput) {
 }
 
 
-
 function storeData(data) {
     localStorage.setItem('foodDrinkData', JSON.stringify(data))
     // window.location = './recipe.html' //.recipe.html is the second page
