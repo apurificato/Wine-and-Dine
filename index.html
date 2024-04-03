@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-     <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+
     <title>Wine & Dine - Recipe App</title>
 </head>
 <body data-theme="dark">
@@ -56,12 +60,6 @@
         <form class="foodInput is-flex is-flex-direction-column p-5">
             <label for="ingredient">Ingredient 1</label>
              <input id="userInputOne" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
-             <label for="ingredient-two">Ingredient 2</label>
-             <input id="userInputTwo" class="input m-3" type="text" id="name" name="ingredient-two" placeholder="Enter your name">
-             <label for="ingredient-three">Ingredient 3</label>
-             <input id="userInputThree" class="input m-3" type="text" id="name" name="ingredient-three" placeholder="Enter your name">
-             <label for="ingredient-three">cuisine</label>
-             <input id="cuisine" class="input m-3" type="text" id="name" name="cuisine" placeholder="Enter your dish">
              <div class="is-flex-direction-column is-content-align-center mt-6 has-text-centered">
              <label class="mt-6" for="checkbox">Do you want to pair a wine or cocktail with your meal?</label>
              <div class="wine-check is-flex is-justify-content-center mt-3">
@@ -158,8 +156,8 @@
       
         <button class="modal-close is-large" aria-label="close"></button>
       </div> -->
-      <script src="assets/js/script.js"></script>
+     
+      <script src="assets/js/form.js"></script>
       <script src="assets/js/modal.js"></script>
-      
   </body>
 </html>
