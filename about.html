@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Wine & Dine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- You can add your custom styles here -->
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <h1 class="title">Wine & Dine</h1>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item is-active" href="about.html">About</a>
+                    <!-- Add more navigation links as needed -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <section id="overview" class="content">
+                <h2>Overview</h2>
+                <p>Welcome to Wine & Dine, your ultimate companion for discovering fine wines and dining experiences. Our app is designed to elevate your culinary adventures by providing curated recommendations, personalized suggestions, and a seamless booking experience.</p>
+            </section>
+
+            <section id="mission" class="content">
+                <h2>Our Mission</h2>
+                <p>At Wine & Dine, we believe that great meals are not just about food – they're about creating memorable experiences. Our mission is to connect wine enthusiasts and foodies with top-rated restaurants, wineries, and culinary events, fostering a community of passionate gastronomes.</p>
+            </section>
+
+            <section id="team" class="content">
+                <h2>Meet the Team</h2>
+                <div class="columns is-multiline">
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="team-member1.jpg" alt="VIN">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">VIN</p>
+                                        <p class="subtitle is-6">Co-Founder & CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="team-member2.jpg" alt="MIRSAD">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">MIRSAD</p>
+                                        <p class="subtitle is-6">Co-Founder & CTO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="team-member3.jpg" alt="WES">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">WES</p>
+                                        <p class="subtitle is-6">Lead Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="team-member4.jpg" alt="ANTHONY">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">ANTHONY</p>
+                                        <p class="subtitle is-6">Marketing Director</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more team members as needed -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer is-flex is-justify-content-space-between">
+        <p>&copy; 2024 Rutgers Coding Bootcamp</p>
+        <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
+        <p>Wesley, Vinny, Mirsad, and Anthony P.</p>
+      </footer>
+
+    <script>
+        // Toggle navbar burger menu in Bulma
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
