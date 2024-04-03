@@ -1,0 +1,74 @@
+<<<<<<< HEAD
+/* GLOBAL */
+
+:root {
+    --main-font: "Kanit", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+section {
+    background-color: black !important;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.heading {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.search-heading {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+=======
+/* RESETS */
+.footer {
+    padding: 30px;
+}
+
+/* CUSTOM STYLES */
+div.hero-head {
+    background-color: hsl( 221 , 14% , 9% );
+}
+
+.navbar-item img {
+    max-height: 80px;
+}
+
+/* div.container {
+    background-image: ;
+} */
+
+#about-us {
+    background-color: hsl( 221 , 14% , 9% );
+}
+
+/* #card-shadow {
+    --bulma-card-shadow: #000;
+} */
+
+.footer {
+    background-color: hsl( 221 , 14% , 9% );
+}
+
+footer p {
+    font-size: 14px;
+    padding: 0 3%;
+}
+
+.footer img {
+    max-height: 35px;
+}
+
+/* RESPONSIVE */
+>>>>>>> 3d814dd509dca4e9d6d56896a28e9e283b39751e
