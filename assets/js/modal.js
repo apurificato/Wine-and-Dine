@@ -1,5 +1,4 @@
 
-
 document.addEventListener('DOMContentLoaded', () => {
     // Modal trigger button
     const btn = document.getElementById('showModal');

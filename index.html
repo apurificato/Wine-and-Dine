@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-
+     <script src="jquery-3.7.1.min.js"></script>
     <title>Wine & Dine - Recipe App</title>
 </head>
 <body data-theme="dark">
@@ -21,7 +21,7 @@
             <!-- Positioning container -->
             <div class="image-overlay-container" style="position: relative;">
                 <img src="/assets/images/hero.jpg" alt="hero">
-                <button id="showModal" class="button is-info" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Show Modal</button>
+                <button id="showModal" class="button is-info" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Find afoods</button>
             </div>
         </figure>
     </section>
@@ -36,16 +36,14 @@
       <div class="box">
         <h1 class="has-text-centered">Food Input</h1>
         <form class="foodInput is-flex is-flex-direction-column p-5">
-            <label for="ingredient-one">Ingredient 1</label>
-             <input class="input m-3" type="text" id="name" name="ingredient-one" placeholder="Enter your meal">
+            <label for="ingredient">Ingredient 1</label>
+             <input id="userInputOne" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
              <label for="ingredient-two">Ingredient 2</label>
-             <input class="input m-3" type="text" id="name" name="ingredient-two" placeholder="Enter your name">
+             <input id="userInputTwo" class="input m-3" type="text" id="name" name="ingredient-two" placeholder="Enter your name">
              <label for="ingredient-three">Ingredient 3</label>
-             <input class="input m-3" type="text" id="name" name="ingredient-three" placeholder="Enter your name">
-             <label for="ingredient-four">Ingredient 4</label>
-             <input class="input m-3" type="text" id="name" name="ingredient-four" placeholder="Enter your name">
-             <label for="ingredient-five">Ingredient 5</label>
-             <input class="input m-3" type="text" id="name" name="ingredient-five" placeholder="Enter your name">
+             <input id="userInputThree" class="input m-3" type="text" id="name" name="ingredient-three" placeholder="Enter your name">
+             <label for="ingredient-three">cuisine</label>
+             <input id="cuisine" class="input m-3" type="text" id="name" name="cuisine" placeholder="Enter your dish">
              <div class="is-flex-direction-column is-content-align-center mt-6 has-text-centered">
              <label class="mt-6" for="checkbox">Do you want to pair a wine or cocktail with your meal?</label>
              <div class="wine-check is-flex is-justify-content-center mt-3">
@@ -54,9 +52,10 @@
             </div>
             <div class="cocktail-check is-flex is-justify-content-center mt-3">
              <h1 class="mr-3">Cocktail</h1>
-             <input class="check " type="checkbox" id="cocktail" name="cocktail">
+             <input id="cocktail" class="check " type="checkbox"  name="cocktail">
             </div>
             </div>
+           <button id="searchBtn"submit="submit">Search</button>
            </form>
       </div>
     </div>
@@ -66,10 +65,16 @@
   </div>
   
         </figure>
+
+    <main id="outputIng"> 
+      
+
+    </main>
         
       
    
-    <script src="assets/js/form.js">
-    </script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
