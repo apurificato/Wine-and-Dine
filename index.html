@@ -1,60 +1,96 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wine & Dine - Recipe App</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="./assets/js/script.js"></script>
-  </head>
-
-  <body>
-    <!-- HERO SECTION -->
-    <section class="hero has-background-link-light is-fullheight">
-        <!-- Header & Nav: will stick at the top of page -->
-        <div class="hero-head">
-          <header class="navbar">
-            <div class="container">
-              <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
-                  <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
-                </a>
-                <span class="navbar-burger" data-target="navbarMenuHeroC">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </div>
-              <div id="navbarMenuHeroC" class="navbar-menu">
-                <div class="navbar-end">
-                  <a class="navbar-item has-text-white-bis" href="#about-us">About Us</a>
-                  <span class="navbar-item">
-                    <button class="button is-danger">Get Started</button>
-                  </span>
-                  <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a>
-                </div>
-              </div>
+     <script src="jquery-3.7.1.min.js"></script>
+    <title>Wine & Dine - Recipe App</title>
+</head>
+<body data-theme="dark">
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger" data-target="navbarMenuHeroC">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroC" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item has-text-white-bis" href="#about-us">About Us</a>
+          <span class="navbar-item">
+            <button class="button is-danger">Get Started</button>
+          </span>
+          <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a>
+        </div>
+      </div>
+    </div>
+  </header>
+    </header>
+    <section class="hero section h-25 is-centered has-background-black">
+        <figure class="image parent-container">
+            <h1 class="heading has-text-centered">Recipe and wine pairing generation application</h1>
+            <!-- Positioning container -->
+            <div class="image-overlay-container" style="position: relative;">
+                <img src="/assets/images/hero.jpg" alt="hero">
+                <button id="showModal" class="js-modal-trigger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Find a foods</button>
             </div>
-          </header>
-        </div>
-        <!-- HERO CONTENT: will be in the middle of page -->
-        <div class="hero-body is-flex is-flex-direction-column">
-          <div class="container has-text-centered is-align-content-center">
-            <h1 class="title is-1 has-text-dark">Wine & Dine</h1>
-            <h2 class="subtitle is-3 has-text-dark">Meal and Wine Pairing Web Application</h2>
-          </div>
-          <div class="buttons">
-            <button class="js-modal-trigger button is-danger" data-target="modal-js-wine-and-dine-1">
-                Generate Dinner & Wine Options
-            </button>
-            <!-- <button class="button is-danger">Get Started</button> -->
-          </div>
-        </div>
+        </figure>
     </section>
+            <!-- Modal START -->
+<div id="myModal" class="modal">
+    <!-- Modal background -->
+    <div class="modal-background"></div>
     
-    <!-- MAIN SECTION -->
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- Any other Bulma elements to go here -->
+      <div class="box">
+        <h1 class="has-text-centered">Food Input</h1>
+        <form class="foodInput is-flex is-flex-direction-column p-5">
+            <label for="ingredient">Ingredient 1</label>
+             <input id="userInputOne" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
+             <label for="ingredient-two">Ingredient 2</label>
+             <input id="userInputTwo" class="input m-3" type="text" id="name" name="ingredient-two" placeholder="Enter your name">
+             <label for="ingredient-three">Ingredient 3</label>
+             <input id="userInputThree" class="input m-3" type="text" id="name" name="ingredient-three" placeholder="Enter your name">
+             <label for="ingredient-three">cuisine</label>
+             <input id="cuisine" class="input m-3" type="text" id="name" name="cuisine" placeholder="Enter your dish">
+             <div class="is-flex-direction-column is-content-align-center mt-6 has-text-centered">
+             <label class="mt-6" for="checkbox">Do you want to pair a wine or cocktail with your meal?</label>
+             <div class="wine-check is-flex is-justify-content-center mt-3">
+             <h1 class="mr-3">Wine</h1>
+             <input class="check" type="checkbox" id="wine" name="wine">
+            </div>
+            <div class="cocktail-check is-flex is-justify-content-center mt-3">
+             <h1 class="mr-3">Cocktail</h1>
+             <input id="cocktail" class="check " type="checkbox"  name="cocktail">
+            </div>
+            </div>
+           <button id="searchBtn"type="submit">Search</button>
+           </form>
+      </div>
+    </div>
+    
+    <!-- Modal close button -->
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  
+        </figure>
+
+    <main id="outputIng"> 
+      
+
+    </main>
+        
+      
+
     <main>
     <!-- About Us Section -->
     <section id="about-us" class="section is-medium fixed-grid">
@@ -64,7 +100,7 @@
                 <h4 class="subtitle pt-5"> Wine & Dine is an application to treat <strong>food and libation</strong> boredom</h4>
                 <p class="pb-5">Our web application offers exciting features that enable you to input food preferences and get a list of <strong>recipe and wine results</strong> based on those interests and parameters.</p>
                 <p class="pb-5">What are you in the mood for? You will be prompted with questions about the type of food you want to eat. Input the main meal item you are interested in (whether it be chicken, beef, or fish) along with some side ingredients (vegetables, starches, etc.). Just click the button to get started!</p>
-                <button class="js-modal-trigger button is-danger" data-target="modal-js-wine-and-dine-1">
+                <button class=" button is-danger" >
                     Generate Dinner & Wine Options
                 </button>
             </div>
@@ -108,41 +144,22 @@
         <p>Wesley, Vinny, Mirsad, and Anthony P.</p>
       </footer>
     <!-- INTERNAL JS -->
-    <!-- Script for Navbar Hamburger Menu -->
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    
-          // Get all "navbar-burger" elements
-          const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    
-          // Add a click event on each of them
-          $navbarBurgers.forEach( el => {
-            el.addEventListener('click', () => {
-    
-              // Get the target from the "data-target" attribute
-              const target = el.dataset.target;
-              const $target = document.getElementById(target);
-    
-              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-              el.classList.toggle('is-active');
-              $target.classList.toggle('is-active');
-    
-            });
-          });
-    
-        });
-    </script>
-    <div id="modal-js-wine-and-dine-1" class="modal">
+  
+     
+    <!-- <div id="modal-js-wine-and-dine-1" class="modal">
         <div class="modal-background"></div>
       
         <div class="modal-content">
           <div class="box">
             <p>Modal JS Wine and Dine 1</p>
-            <!-- Your content -->
+           
           </div>
         </div>
       
         <button class="modal-close is-large" aria-label="close"></button>
-      </div>
+      </div> -->
+      <script src="assets/js/script.js"></script>
+      <script src="assets/js/modal.js"></script>
+      
   </body>
 </html>

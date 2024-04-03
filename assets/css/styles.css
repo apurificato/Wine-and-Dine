@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+/* GLOBAL */
+
+:root {
+    --main-font: "Kanit", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+section {
+    background-color: black !important;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.heading {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.search-heading {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+=======
 /* RESETS */
 .footer {
     padding: 30px;
@@ -38,3 +71,4 @@ footer p {
 }
 
 /* RESPONSIVE */
+>>>>>>> 3d814dd509dca4e9d6d56896a28e9e283b39751e
