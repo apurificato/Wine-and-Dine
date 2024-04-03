@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+     <script src="jquery-3.7.1.min.js"></script>
+    <title>Wine & Dine - Recipe App</title>
+</head>
+<body data-theme="dark">
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger" data-target="navbarMenuHeroC">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroC" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item has-text-white-bis" href="about.html">About Us</a>
+          <!-- <span class="navbar-item">
+            <button class="button is-danger">Get Started</button>
+          </span> -->
+          <!-- <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a> -->
+        </div>
+      </div>
+    </div>
+  </header>
+    <main id ="outputIng">
+    <!-- Cocktail / Drink Generation Section -->
+    <section id="cocktails" class="section is-medium has-background-link-light fixed-grid">
+        <div class="columns">
+            <div class="column">
+                <h3 class="title is-3 has-text-dark">Cocktail & Mixed Drink Recipes Generator</h3>
+            </div>
+            <div class="column">
+                <div id="card-shadow" class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="./assets/images/pexels-on-shot-2789328.jpg" alt="Placeholder image"/>
+                      </figure>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <!-- FOOTER SECTION -->
+      <footer class="footer is-flex is-justify-content-space-between">
+        <p>&copy; 2024 Rutgers Coding Bootcamp</p>
+        <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
+        <p>Wesley, Vinny, Mirsad, and Anthony P.</p>
+      </footer>
+    <!-- INTERNAL JS -->
+  
+     
+    <!-- <div id="modal-js-wine-and-dine-1" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-content">
+          <div class="box">
+            <p>Modal JS Wine and Dine 1</p>
+           
+          </div>
+        </div>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div> -->
+      <script src="assets/js/script.js"></script>
+      <script src="assets/js/modal.js"></script>
+      
+  </body>
+</html>
