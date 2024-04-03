@@ -6,6 +6,7 @@
     <title>Wine & Dine - Recipe App</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/script.js"></script>
   </head>
 
   <body>
@@ -32,6 +33,7 @@
                   <span class="navbar-item">
                     <button class="button is-danger">Get Started</button>
                   </span>
+                  <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a>
                 </div>
               </div>
             </div>
@@ -39,12 +41,15 @@
         </div>
         <!-- HERO CONTENT: will be in the middle of page -->
         <div class="hero-body is-flex is-flex-direction-column">
-          <div class="container has-text-left">
+          <div class="container has-text-centered is-align-content-center">
             <h1 class="title is-1 has-text-dark">Wine & Dine</h1>
-            <h2 class="subtitle is-3 has-text-dark">Meal and Wine Pairing App</h2>
+            <h2 class="subtitle is-3 has-text-dark">Meal and Wine Pairing Web Application</h2>
           </div>
           <div class="buttons">
-            <button class="button is-danger">Get Started</button>
+            <button class="js-modal-trigger button is-danger" data-target="modal-js-wine-and-dine-1">
+                Generate Dinner & Wine Options
+            </button>
+            <!-- <button class="button is-danger">Get Started</button> -->
           </div>
         </div>
     </section>
@@ -59,7 +64,9 @@
                 <h4 class="subtitle pt-5"> Wine & Dine is an application to treat <strong>food and libation</strong> boredom</h4>
                 <p class="pb-5">Our web application offers exciting features that enable you to input food preferences and get a list of <strong>recipe and wine results</strong> based on those interests and parameters.</p>
                 <p class="pb-5">What are you in the mood for? You will be prompted with questions about the type of food you want to eat. Input the main meal item you are interested in (whether it be chicken, beef, or fish) along with some side ingredients (vegetables, starches, etc.). Just click the button to get started!</p>
-                <button class="button is-danger">Get Started</button>
+                <button class="js-modal-trigger button is-danger" data-target="modal-js-wine-and-dine-1">
+                    Generate Dinner & Wine Options
+                </button>
             </div>
             <div class="column">
                 <div class="card">
@@ -125,5 +132,17 @@
     
         });
     </script>
+    <div id="modal-js-wine-and-dine-1" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-content">
+          <div class="box">
+            <p>Modal JS Wine and Dine 1</p>
+            <!-- Your content -->
+          </div>
+        </div>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
   </body>
 </html>
