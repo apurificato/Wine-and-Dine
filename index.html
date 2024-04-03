@@ -8,12 +8,30 @@
     <title>Wine & Dine - Recipe App</title>
 </head>
 <body data-theme="dark">
-    <header>
-        <nav class="navbar is-justify-content-center has-background-black" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand is-flex-direction-column p-3">
-              <h1 class="search-heading is-size-3 p-2"> Wine & Dine</h1>
-            </div>
-          </nav>
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
+        </a>
+        <span class="navbar-burger" data-target="navbarMenuHeroC">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroC" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item has-text-white-bis" href="#about-us">About Us</a>
+          <span class="navbar-item">
+            <button class="button is-danger">Get Started</button>
+          </span>
+          <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a>
+        </div>
+      </div>
+    </div>
+  </header>
     </header>
     <section class="hero section h-25 is-centered has-background-black">
         <figure class="image parent-container">
