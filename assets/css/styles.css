@@ -7,9 +7,9 @@ html, body {
     height: 100%;
 }
 
-section {
+/* section {
     background-color: black !important;
-}
+} */
 
 h1 {
     font-family: var(--main-font);
@@ -37,29 +37,33 @@ div.hero-head {
     background-color: hsl( 221 , 14% , 9% );
 }
 
-.navbar-item img {
+/* header.navbar {
+    height: 200px;
+} */
+
+.navbar-item img.logo {
     max-height: 80px;
 }
 
-/* div.container {
-    background-image: ;
-} */
+section.has-bg-img { 
+    background-image: url("./assets/images/Wine-and-Dine.png");
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999;
+}
 
 #about-us {
     background-color: hsl( 221 , 14% , 9% );
 }
-
-/* #card-shadow {
-    --bulma-card-shadow: #000;
-}
-*/
 
 footer p {
     font-size: 14px;
     padding: 0 3%;
 }
 
-.footer img {
+.footer img.logo {
     max-height: 35px;
 }
 
