@@ -4,35 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Wine & Dine</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
     <link rel="stylesheet" href="styles.css"> <!-- You can add your custom styles here -->
 </head>
-<body style="background-color: teal;">
-    <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
-                    <h1 class="title">Wine & Dine</h1>
-                </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+<body data-theme="dark">
+    <header class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+              <img id="logo" src="./assets/images/Wine-and-Dine.png" alt="Logo" />
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroC">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item has-text-white-bis" href="index.html">Home</a>
+                <a class="navbar-item has-text-white-bis" href="about.html">About Us</a>
+                <span class="navbar-item">
+                    <a href="index.html#get-started"><button class="button is-danger">Get Started</button></a>
+                </span>
+              <!-- <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a> -->
             </div>
+          </div>
+        </div>
+      </header>
 
-            <div id="navbarMenu" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="index.html">Home</a>
-                    <a class="navbar-item is-active" href="about.html">About</a>
-                    <!-- Add more navigation links as needed -->
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="section">
+    <main class="section has-background-primary-05">
         <div class="container">
             <section id="overview" class="content">
                 <h2>Overview</h2>
