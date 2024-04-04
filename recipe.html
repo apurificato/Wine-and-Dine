@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>Wine & Dine - Recipe App</title>
+    <title>Wine & Dine - Recipe Results</title>
 </head>
 <body data-theme="dark">
   <header class="navbar">
@@ -24,6 +25,9 @@
       <div id="navbarMenuHeroC" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item has-text-white-bis" href="about.html">About Us</a>
+          <span class="navbar-item">
+            <a href="./index.html"><button class="button is-danger">Find Another Recipe</button></a>
+          </span>
           <!-- <span class="navbar-item">
             <button class="button is-danger">Get Started</button>
           </span> -->
@@ -34,22 +38,26 @@
   </header>
     <main id ="outputIng">
     <!-- Cocktail / Drink Generation Section -->
-    <section id="cocktails" class="section is-medium has-background-link-light fixed-grid">
-        <div id="recipeSection">
-            <div class="column">
-                <h3 class="title is-3 has-text-dark">Cocktail & Mixed Drink Recipes Generator</h3>
-            </div>
-            <div class="column">
+    <section id="cocktails" class=" section is-flex is-flex-direction-column has-background-light">
+      <div>
+        <h1 class="title is-1 has-text-dark mb-6">Recipe and Drink Results</h1>
+      </div>
+      <div id="recipeSection">
+          <ul id="recipeOutput"></ul>
+            <!-- <div class="columns">
+              <div class="column is-half">
                 <div id="card-shadow" class="card">
                     <div class="card-image">
-                      <figure class="image is-4by3">
-                        <img src="./assets/images/pexels-on-shot-2789328.jpg" alt="Placeholder image"/>
-                      </figure>
                     </div>
-                  </div>
-            </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="card has-background-primary-light">
+                  <ul id="recipeOutput"></ul>
+                </div>
+              </div>
+            </div> -->
         </div>
-        <ul id="recipeOutput">No recipes yet</ul>
     </section>
     </main>
     <!-- FOOTER SECTION -->
@@ -73,8 +81,7 @@
       
         <button class="modal-close is-large" aria-label="close"></button>
       </div> -->
-      <script src="assets/js/script.js"></script>
-      <script src="assets/js/modal.js"></script>
+   
       <script src="assets/js/output.js"></script>
       
   </body>

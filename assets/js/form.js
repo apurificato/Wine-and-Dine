@@ -1,7 +1,7 @@
 //SPOONACULAR API
 
 const IngBaseURL = 'https://api.spoonacular.com/recipes/findByIngredients'
-const apiKey = '?apiKey=72ec88a568254c0597ad15bef4a8b152'
+const apiKey = '?apiKey=b743a7417dde4ae99242051b6119b3a5'
 const findByIng = '&ingredients=' //after = comes user inputted food item
 const WineBaseURL = 'https://api.spoonacular.com/food/wine/pairing'
 const WinePair = '&food=' // after = comes user inputted food item
@@ -30,6 +30,7 @@ function getWinePair(userInput) {
 
 
 function storeData(data) {
+  console.log('stored data', data)
     localStorage.setItem('foodDrinkData', JSON.stringify(data))
     window.location = 'recipe.html' //.recipe.html is the second page
     // window.location.assign('recipe.html')
@@ -47,15 +48,9 @@ function storeData(data) {
     if (userInput) {
      getRecipe(userInput) 
       .then(function (recipeData) {
-        console.log(recipeData); 
+        console.log('recipe Data', recipeData); 
         data.recipes = recipeData.slice(0, 5)
-      })
-      
-      .catch(function (error) {
-          console.error('Error fetching wine data:', error);
-          storeData(data); // Store data even if there's an error
-      });
-
+        
         if (wineCheckbox.prop('checked')) {
           getWinePair(userInput)
             .then(function (wineData) {
@@ -67,23 +62,29 @@ function storeData(data) {
           }
         else if (cocktailCheckbox.prop('checked')) {
           $.get(cocktailData)
-            .then(function(data) {
-              console.log(data)
+            .then(function(cocktailData) {
+              console.log(cocktailData)
               data.cocktail = cocktailData
 
               storeData(data)
-              })
+            })
+        
+           } else {
+          storeData(data)
+        }  
+      })
+      
+      .catch(function (error) {
+          console.error('Error fetching wine data:', error);
+          storeData(data); // Store data even if there's an error
+      });
 
-        } 
-        // .then(function () {
-        // //   storeData(data); // Store data after all promises are resolved
-        //   })
-        //   .catch(function (error) {
-        //   console.error('Error:', error);
-        //   storeData(data); // Store data even if there's an error
-          //  });  
-    }
+        
+
+   } 
 });
+ 
+
 
 
 

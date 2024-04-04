@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-  <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
     <title>Wine & Dine - Recipe App</title>
 </head>
 
@@ -26,11 +26,10 @@
       </div>
       <div id="navbarMenuHeroC" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item has-text-white-bis" href="index.html">Home</a>
           <a class="navbar-item has-text-white-bis" href="about.html">About Us</a>
           <span class="navbar-item">
-            <a href="#get-started"><button class="button is-danger">Get Started</button></a>
-          </span>
+            <a href="index.html#hero"><button class="js-modal-trigger button is-danger" data-target="myModal">Get Started</button></a>
+        </span>
           <!-- <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a> -->
         </div>
       </div>
@@ -39,14 +38,14 @@
     <section class="hero is-large has-bg-img section h-25 is-centered">
         <figure class="image parent-container">
             <!-- Positioning container -->
-            <div class="image-overlay-container" style="position: relative;">
-                <img src="/assets/images/hero.jpg" alt="hero">
-                <button id="showModal" class="button is-danger js-modal-trigger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Generate a Recipe</button>
-            <h1 class="heading has-text-centered title is-1 pb-5">Recipe and Wine Pairing Generation Application</h1>
-            <!-- Positioning container -->
-            <div class="image-overlay-container" style="position: relative">
+            <!-- <div class="image-overlay-container" style="position: relative;"> -->
                 <!-- <img src="/assets/images/hero.jpg" alt="hero"> -->
-                <button id="showModal" class="js-modal-trigger button is-danger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Find A Recipe & Wine Pair</button>
+                <!-- <button id="showModal" class="button is-danger js-modal-trigger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Generate a Recipe</button> -->
+            <!-- Positioning container -->
+            <div class="image-overlay-container is-flex-direction-column" style="position: relative">
+                <!-- <img src="/assets/images/hero.jpg" alt="hero"> -->
+                <h1 id="hero-heading" class="heading has-text-centered title is-1" >Recipe and Drink Pairing Generation Application</h1>
+                <button id="showModal" class="js-modal-trigger button is-danger" data-target="myModal">Find A Recipe & Drink Pair</button>
             </div>
         </figure>
     </section>
@@ -59,9 +58,9 @@
     <div class="modal-content">
       <!-- Any other Bulma elements to go here -->
       <div class="box">
-        <h1 class="has-text-centered">Food Input</h1>
+        <h1 class="has-text-centered">Food Input for Meal and Wine Pairing</h1>
         <form class="foodInput is-flex is-flex-direction-column p-5">
-            <label for="ingredient">Ingredient 1</label>
+            <label for="ingredient" class="pl-4">Ingredient Here:</label>
              <input id="ingredient" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
              <div class="is-flex-direction-column is-content-align-center mt-6 has-text-centered">
              <label class="mt-6" for="checkbox">Do you want to pair a wine or cocktail with your meal?</label>
@@ -69,12 +68,12 @@
              <h1 class="mr-3">Wine</h1>
              <input class="check" type="checkbox" id="wine" name="wine">
             </div>
-            <div class="cocktail-check is-flex is-justify-content-center mt-3">
+            <div class="cocktail-check is-flex is-justify-content-center mt-3 pb-5">
              <h1 class="mr-3">Cocktail</h1>
-             <input id="cocktail" class="check " type="checkbox"  name="cocktail">
+             <input id="cocktail" class="check" type="checkbox"  name="cocktail">
             </div>
             </div>
-           <button id="searchBtn"type="submit">Search</button>
+           <button class="button is-danger" id="searchBtn"type="submit">Search</button>
            </form>
       </div>
     </div>
@@ -82,21 +81,55 @@
     <!-- Modal close button -->
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
+
+              <!-- Modal START Second Modal content for dinner and wine option-->
+<div id="secondGenerateModal" class="modal">
+  <!-- Modal background -->
+  <div class="modal-background"></div>
+  
+  <!-- Modal content -->
+  <div class="modal-content">
+    <!-- Any other Bulma elements to go here -->
+    <div class="box">
+      <h1 class="has-text-centered">Food Input for Meal and Wine Pairing</h1>
+      <form class="foodInput is-flex is-flex-direction-column p-5">
+          <label for="ingredient" class="pl-4">Ingredient Option 1</label>
+           <input id="ingredient" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
+           <div class="is-flex-direction-column is-content-align-center mt-6 has-text-centered">
+           <label class="mt-6" for="checkbox">Do you want to pair a wine or cocktail with your meal?</label>
+           <div class="wine-check is-flex is-justify-content-center mt-3">
+           <h1 class="mr-3">Wine</h1>
+           <input class="check" type="checkbox" id="wine" name="wine">
+          </div>
+          <div class="cocktail-check is-flex is-justify-content-center mt-3 pb-5">
+           <h1 class="mr-3">Cocktail</h1>
+           <input id="cocktail" class="check" type="checkbox"  name="cocktail">
+          </div>
+          </div>
+         <button class="button is-danger" id="searchBtn"type="submit">Search</button>
+         </form>
+    </div>
+  </div>
+  
+  <!-- Modal close button -->
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
     <!-- <main id="outputIng"> 
 
     </main> -->
     <main id="outputIng">
     <!-- About Us Section -->
-    <section id="get-started" class="section is-medium fixed-grid">
+    <section id="get-started" class="section is-small fixed-grid has-background-link-light">
         <div class="columns">
             <div class="column">
-                <h3 class="title is-3">Using Wine & Dine</h3>
-                <h4 class="subtitle pt-5"> Wine & Dine is an application to treat <strong>food and libation</strong> boredom</h4>
-                <p class="pb-5">Our web application offers exciting features that enable you to input food preferences and get a list of <strong>recipe and wine results</strong> based on those interests and parameters.</p>
-                <p class="pb-5">What are you in the mood for? You will be prompted with questions about the type of food you want to eat. Input the main meal item you are interested in (whether it be chicken, beef, or fish) along with some side ingredients (vegetables, starches, etc.). Just click the button to get started!</p>
-                <button class=" button is-danger" >
-                    Generate Dinner & Wine Options
-                </button>
+                <h3 class="title is-3 has-text-danger mb-3">Using Wine & Dine</h3>
+                <h4 class="has-text-dark subtitle pt-5"> Wine & Dine is an application to treat <strong class="has-text-danger">food and libation</strong> boredom</h4>
+                <p class="has-text-dark pb-5 is-spaced">Our web application offers exciting features that enable you to input food preferences and get a list of <strong class="has-text-danger">recipe and wine results</strong> based on those interests and parameters.</p>
+                <p class="has-text-dark pb-5 is-spaced">What are you in the mood for? You will be prompted with questions about the type of food you want to eat. Input the main meal item you are interested in (whether it be chicken, beef, or fish) along with some side ingredients (vegetables, starches, etc.). Just click the button to get started!</p>
+                <!-- <button class=" button is-danger"button id="showModal" class="js-modal-trigger button is-danger" data-target="myModal"  data-target="secondGenerateModal">
+                    Generate Dinner
+                </button> -->
             </div>
             <div class="column">
                 <div class="card">
@@ -110,7 +143,7 @@
         </div>
     </section>
     <!-- Cocktail / Drink Generation Section -->
-    <section id="cocktails" class="section is-medium has-background-link-light fixed-grid">
+    <section id="cocktails" class="section is-small fixed-grid">
         <div class="columns">
             <div class="column">
                 <div id="card-shadow" class="card">
@@ -122,14 +155,62 @@
                   </div>
             </div>
             <div class="column">
-                <h3 class="title is-3 has-text-dark">Cocktail & Mixed Drink Generator</h3>
-                <h4 class="subtitle has-text-dark pt-5">
-                    Feeling something <em>different</em> or <strong class="has-text-dark">stronger</strong>? Try a cocktail with your meal instead of a wine</h4>
-                <p class="is-1 has-text-dark pb-5">Not feeling wine with dinner? We will help you come up with some other options instead. Click the button to generate a cocktail or mixed drink to go with your meal!</p>
-                <button class="button is-danger">Generate a Drink</button>
+                <h3 class="title is-3 has-text-danger mb-5">Cocktail & Mixed Drink Recipes</h3>
+                <h4 class="subtitle has-text-light pt-5">
+                    Feeling something <em>different</em> or <strong class="has-text-danger">stronger</strong>? Try a cocktail with your meal instead of a wine</h4>
+                <p class="is-1 has-text-light pb-5">Not feeling wine with dinner? We will help you come up with some other options instead. Click the button to generate a cocktail or mixed drink to go with your meal!</p>
+                <!-- <button class="button is-danger">Generate a Drink</button> -->
             </div>
         </div>
     </section>
+        <!-- Example Section -->
+        <section id="cocktails" class="section is-small has-background-link-light fixed-grid">
+          <div class="columns">
+            <div class="column">
+              <div id="card-shadow" class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="./assets/images/Filet_Mignon_Cognac_508x336.jpeg" alt="Placeholder image" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="title is-3  has-text-danger">Featured Recipe</h3>
+              <h4 class="subtitle is-4 is-size-3 has-text-dark pt-5">
+                Filet Mignon With Cognac Sauce</h4>
+              <p class="is-1 has-text-dark pb-5">This elegant dish features tender filet mignon steak served with a rich and
+                flavorful cognac sauce. It's perfect for a special occasion or a romantic dinner.</p>
+              <h4 class="title is-4 has-text-dark">Ingredients:</h4>
+              <ul>
+                <li class="has-text-dark">4 filet mignon steaks</li>
+                <li class="has-text-dark">2 tablespoons butter</li>
+                <li class="has-text-dark">2 shallots, finely chopped</li>
+                <li class="has-text-dark">1/2 cup cognac</li>
+                <li class="has-text-dark">1 cup beef broth</li>
+                <li class="has-text-dark">Salt and pepper to taste</li>
+              </ul>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <h3 class="title is-3 has-text-danger">Featured Drink Pairing</h3>
+              <h4 class="subtitle is-4 is-size-3 has-text-dark pt-5">
+                Cabernet Sauvignon</h4>
+              <p class="is-1 has-text-dark pb-5">Cabernet Sauvignon is a bold and robust red wine known for its rich flavors and full body. It's one of the most popular red wine varietals and pairs well with a variety of dishes.</p>
+              <p class="title is-size-6 has-text-dark"><p>Cabernet Sauvignon pairs particularly well with rich and hearty dishes such as steak, lamb, and aged cheeses. Its bold flavors and firm tannins complement the savory flavors of these foods.</p></h3>
+              </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="./assets/images/wine-pour.png" alt="Placeholder image"/>
+                      </figure>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </section>
     </main>
     <!-- FOOTER SECTION -->
       <footer class="footer is-flex is-justify-content-space-between">
