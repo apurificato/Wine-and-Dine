@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
-    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Wine & Dine - Recipe App</title>
 </head>
+
 <body data-theme="dark">
   <header class="navbar">
     <div class="container">
@@ -39,11 +36,10 @@
     </header>
     <section class="hero section h-25 is-centered has-background-black">
         <figure class="image parent-container">
-            <h1 class="heading has-text-centered">Recipe and wine pairing generation application</h1>
             <!-- Positioning container -->
             <div class="image-overlay-container" style="position: relative;">
                 <img src="/assets/images/hero.jpg" alt="hero">
-                <button id="showModal" class="js-modal-trigger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Find a foods</button>
+                <button id="showModal" class="button is-danger js-modal-trigger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Generate a Recipe</button>
             </div>
         </figure>
     </section>
@@ -59,7 +55,7 @@
         <h1 class="has-text-centered">Food Input</h1>
         <form class="foodInput is-flex is-flex-direction-column p-5">
             <label for="ingredient">Ingredient 1</label>
-             <input id="userInput" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
+             <input id="ingredient" class="input m-3" type="text" id="name" name="ingredient" placeholder="Enter your ingredients">
              <div class="is-flex-direction-column is-content-align-center mt-6 has-text-centered">
              <label class="mt-6" for="checkbox">Do you want to pair a wine or cocktail with your meal?</label>
              <div class="wine-check is-flex is-justify-content-center mt-3">
@@ -149,8 +145,8 @@
       
         <button class="modal-close is-large" aria-label="close"></button>
       </div> -->
-     
       <script src="assets/js/form.js"></script>
       <script src="assets/js/modal.js"></script>
+      
   </body>
 </html>
