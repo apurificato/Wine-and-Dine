@@ -32,7 +32,6 @@ h1 {
 .footer {
     padding: 15px;
     background-color: hsl( 221 , 14% , 9% );
-  
 }
 
 /* CUSTOM STYLES */
@@ -40,23 +39,18 @@ div.hero-head {
     background-color: hsl( 221 , 14% , 9% );
 }
 
-/* header.navbar {
-    height: 200px;
-} */
-
-img#logo {
+.navbar img.logo {
     max-height: 80px;
 }
 
 section.has-bg-img { 
-    background-image: url("/assets/images/hero.jpg");
+    background-image: url("../images/hero.jpg");
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size:  cover;
     background-color: #999;
 }
-
 
 .image-overlay-container {
     display: flex;
@@ -81,22 +75,15 @@ footer p {
     padding: 0 3%;
 }
 
-.footer img#logo {
+.footer img.logo {
     max-height: 45px;
 }
-
-
-
-
-
 
 .recipeContent, li {
     color: rgb(55, 55, 55);
     font-family: "Kanit", sans-serif;
     padding: 5px;
 }
-
-
 
 .drinkImg {
     border-radius: 15px;
@@ -105,14 +92,4 @@ footer p {
 .recipeImg {
     border-radius: 15px;
 }
-
-
-
-/* RESPONSIVE */
-
-@media(max-width: 768px) {
-    #recipeSection {
-        margin-top: auto;
-    }
-} 
     
