@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+  <script src="jquery-3.7.1.min.js"></script>
     <title>Wine & Dine - Recipe App</title>
 </head>
 
@@ -24,22 +26,27 @@
       </div>
       <div id="navbarMenuHeroC" class="navbar-menu">
         <div class="navbar-end">
+          <a class="navbar-item has-text-white-bis" href="index.html">Home</a>
           <a class="navbar-item has-text-white-bis" href="about.html">About Us</a>
           <span class="navbar-item">
-            <button class="button is-danger">Get Started</button>
+            <a href="#get-started"><button class="button is-danger">Get Started</button></a>
           </span>
-          <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a>
+          <!-- <a class="navbar-item has-text-white-bis" href="#cocktails">Drink Generator</a> -->
         </div>
       </div>
     </div>
   </header>
-    </header>
-    <section class="hero section h-25 is-centered has-background-black">
+    <section class="hero is-large has-bg-img section h-25 is-centered">
         <figure class="image parent-container">
             <!-- Positioning container -->
             <div class="image-overlay-container" style="position: relative;">
                 <img src="/assets/images/hero.jpg" alt="hero">
                 <button id="showModal" class="button is-danger js-modal-trigger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Generate a Recipe</button>
+            <h1 class="heading has-text-centered title is-1 pb-5">Recipe and Wine Pairing Generation Application</h1>
+            <!-- Positioning container -->
+            <div class="image-overlay-container" style="position: relative">
+                <!-- <img src="/assets/images/hero.jpg" alt="hero"> -->
+                <button id="showModal" class="js-modal-trigger button is-danger" data-target="myModal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Find A Recipe & Wine Pair</button>
             </div>
         </figure>
     </section>
@@ -80,10 +87,10 @@
     </main> -->
     <main id="outputIng">
     <!-- About Us Section -->
-    <section id="about-us" class="section is-medium fixed-grid">
+    <section id="get-started" class="section is-medium fixed-grid">
         <div class="columns">
             <div class="column">
-                <h3 class="title is-3">About Wine & Dine</h3>
+                <h3 class="title is-3">Using Wine & Dine</h3>
                 <h4 class="subtitle pt-5"> Wine & Dine is an application to treat <strong>food and libation</strong> boredom</h4>
                 <p class="pb-5">Our web application offers exciting features that enable you to input food preferences and get a list of <strong>recipe and wine results</strong> based on those interests and parameters.</p>
                 <p class="pb-5">What are you in the mood for? You will be prompted with questions about the type of food you want to eat. Input the main meal item you are interested in (whether it be chicken, beef, or fish) along with some side ingredients (vegetables, starches, etc.). Just click the button to get started!</p>
@@ -119,7 +126,7 @@
                 <h4 class="subtitle has-text-dark pt-5">
                     Feeling something <em>different</em> or <strong class="has-text-dark">stronger</strong>? Try a cocktail with your meal instead of a wine</h4>
                 <p class="is-1 has-text-dark pb-5">Not feeling wine with dinner? We will help you come up with some other options instead. Click the button to generate a cocktail or mixed drink to go with your meal!</p>
-                <button class="button is-danger">Get Started</button>
+                <button class="button is-danger">Generate a Drink</button>
             </div>
         </div>
     </section>
