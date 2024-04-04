@@ -30,6 +30,7 @@ h1 {
 .footer {
     padding: 30px;
     background-color: hsl( 221 , 14% , 9% );
+  
 }
 
 /* CUSTOM STYLES */
@@ -66,5 +67,3 @@ footer p {
 .footer img.logo {
     max-height: 35px;
 }
-
-/* RESPONSIVE */

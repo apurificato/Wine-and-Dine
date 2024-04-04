@@ -2,23 +2,18 @@
 // API
 
 const BaseURL = 'https://api.spoonacular.com/recipes/findByIngredients';
-const apiKey = '036a58d5be4a48bdb9453bfbda2a453f'; // Replace YOUR_API_KEY with your actual API key
-const findByIng = '&ingredients=';
+const apiKey = '66a5d503ff2545049602d4eb1a369c0b'; // Replace YOUR_API_KEY with your actual API key
 const WineBaseURL = 'https://api.spoonacular.com/food/wine/pairing';
 const WinePair = '&food=';
 
 // Variables
 const searchBtn = document.querySelector('#searchBtn'); // Button for initiating search
 const form = document.querySelector('#foodInput'); // User's ingredient input
-const outputIng = document.querySelector('#outputIng'); 
-const ingredientInputOne = document.querySelector('#userInputOne'); // User's first ingredient input
-const ingredientInputTwo = document.querySelector('#userInputTwo'); // User's second ingredient input
-const ingredientInputThree = document.querySelector('#userInputThree'); // User's third ingredient input
+const ingredients = document.querySelector('#ingredient'); // User's first ingredient input
 const cocktail = document.querySelector('#cocktail');
 const wine = document.querySelector('#wine');
 
 
-const ingredients = [ingredientInputOne, ingredientInputTwo, ingredientInputThree]
 
 // Function to fetch recipes by ingredients
 function getRecipesByIng(ingredients) {
@@ -70,6 +65,19 @@ function cocktailHandler() {
 }
 
 
+function storeData(data) {
+    // Retrieve existing data from localStorage or initialize an empty object
+    let storedData = JSON.parse(localStorage.getItem('foodDrinkData')) || {};
+
+    // Merge the new data with the existing data
+    Object.assign(storedData, data);
+
+    // Store the merged data back in localStorage
+    localStorage.setItem('foodDrinkData', JSON.stringify(storedData));
+
+    // Optionally, you can also log the stored data to the console for debugging
+    console.log('Data stored in localStorage:', storedData);
+}
 
 
 
@@ -78,12 +86,7 @@ function cocktailHandler() {
 searchBtn.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the form from submitting traditionally
    
-    const ingredientOne = ingredientInputOne.value.trim();
-    const ingredientTwo = ingredientInputTwo.value.trim();
-    const ingredientThree = ingredientInputThree.value.trim();
-
-    const ingredients = [ingredientOne, ingredientTwo, ingredientThree]
-
+  
 
     if(ingredients) { // Check if there's an input
         getRecipesByIng(ingredients); // Fetch recipes based on the ingredient
